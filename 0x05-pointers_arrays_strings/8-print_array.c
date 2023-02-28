@@ -14,10 +14,8 @@ void print_array(int *a, int n)
 	for (; index < n; index++)
 	{
 		printf("%d", *(a + index));
-		
-		if(index != (n - 1))
+		if (index != (n - 1))
 			printf(", ");
 	}
 	printf("\n");
 }
-		
