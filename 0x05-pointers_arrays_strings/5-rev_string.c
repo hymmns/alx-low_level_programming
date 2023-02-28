@@ -11,7 +11,7 @@ void rev_string(char *s)
 	int len = 0, ind = 0;
 	char sValue = *s;
 
-	while (sValue[len] != '\0')
+	while (s[len] != '\0')
 		len++;
 
 	char str[len];
@@ -19,7 +19,5 @@ void rev_string(char *s)
 	for (; ind < len; ind++)
 		str[ind] = *(sValue + (len - (ind + 1)));
 
-	char *strPointer = &str;
-
-	*s = *strPointer;
+	*s = str;
 }
