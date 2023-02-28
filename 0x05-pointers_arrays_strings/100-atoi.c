@@ -12,7 +12,7 @@ int _atoi(char *s)
 
 	while( s[ind] != '\0')
     	{
-        	unsigned int val = s[ind] - '0';
+        	int val = s[ind] - '0';
 
         	if (!(val > 9) && ((val == 0) || (val > 0)))
             	{
