@@ -18,8 +18,8 @@ void rev_string(char *s)
 	ind = len / 2;
 	while (sec >= 0)
 	{
-		sec = s[ind];
 		strt = s[len - ind];
+		sec = s[ind];
 		s[ind] = strt;
 		s[len - ind] = sec;
 		ind--;
