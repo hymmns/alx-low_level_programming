@@ -14,9 +14,8 @@ int _atoi(char *s)
     	{
         	unsigned int val = s[ind] - '0';
 
-        	if (!(val > 9) && val >= 0)
+        	if (!(val > 9) && ((val == 0) || (val > 0)))
             	{
-                	printf("%d", val);
 
                 	if (marker == -1 && ind > 0)
                    		 marker = ind - 1;
@@ -30,6 +29,6 @@ int _atoi(char *s)
         	ind++;
     	}
 
-    	res = *(c + marker) == '-' ? -res : res;
+    	res = *(s + marker) == '-' ? -res : res;
     	return (res);
 }
