@@ -10,9 +10,9 @@ int _atoi(char *s)
 	int ind = 0,marker = -1;
 	unsigned int res;
 
-	while( s[ind] != '\0')
+	while( *(s + ind) != '\0')
     	{
-        	int val = s[ind] - '0';
+        	int val = *(s + ind) - '0';
 
         	if (!(val > 9) && ((val == 0) || (val > 0)))
             	{
