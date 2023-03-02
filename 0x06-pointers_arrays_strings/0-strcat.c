@@ -14,9 +14,11 @@ char *_strcat(char *dest, char *src)
         while (dest[destIndex])
                 destIndex++;
 
-        while (src[srcIndex])
+        while (src[srcIndex] >= 0)
         {
                 dest[destIndex] = src[srcIndex];
+		if (src[srcIndex] == '\0')
+			break;
                 destIndex++;
                 srcIndex++;
         }
