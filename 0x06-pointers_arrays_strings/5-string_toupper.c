@@ -4,17 +4,18 @@
  * string_toupper - changes all lowercase letters of a string to uppercase
  * @str: string
  *
- * Return: char 
+ * Return: char pointer 
  */
 
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
-        int index = 0;
-        while (*(str + index) != '\0')
-        {
-                if (*(str + index) >= 97 && *(str + index) <= 122)
-                        *(str + index) = str[index] - 32;
-                index++;
-        }
-        return (str);
+	int index = 0;
+
+	while (s[index] != '\0')
+	{
+		if (s[index] >= 97 && s[index] <= 122)
+			s[index] = s[index] - 32;
+		index++;
+	}
+	return (s);
 }
