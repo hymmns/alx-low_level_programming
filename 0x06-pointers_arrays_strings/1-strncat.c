@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strncat -  concatenates two strings
+ * _strncat -  concatenates two strings limit to n byte size
  * @dest: destination
  * @src: source
+ * @n: size
  *
- * Return: char
+ * Return: char pointer
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -16,7 +17,7 @@ char *_strncat(char *dest, char *src, int n)
 		destIndex++;
 	while (srcIndex < n)
 	{
-		*(dest + destIndex) = *(src + srcIndex);
+		dest[destIndex] = src[srcIndex];
 		if (src[srcIndex] == '\0')
 			break;
 		destIndex++;
