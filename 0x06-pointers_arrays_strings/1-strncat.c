@@ -1,27 +1,29 @@
 #include "main.h"
-
 /**
- * _strncat -  concatenates two strings limit to n byte size
- * @dest: destination
- * @src: source
- * @n: size
+ * _strncat - concatenates two string limit to n byte size.
+ * @dest: destination string.
+ * @src: source string.
+ * @n: bytes size.
  *
- * Return: char pointer
+ * Return: char pointer to destination.
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int destIndex = 0, srcIndex = 0;
+	int destIndex  = 0, srcIndex = 0;
 
-	while (des[destIndex])
+	while (dest[destIndex])
+	{
 		destIndex++;
+	}
 	while (srcIndex < n)
 	{
 		dest[destIndex] = src[srcIndex];
 		if (src[srcIndex] == '\0')
+		{
 			break;
-		destIndex++;
+		}
 		srcIndex++;
+		destIndex++;
 	}
 	return (dest);
 }
