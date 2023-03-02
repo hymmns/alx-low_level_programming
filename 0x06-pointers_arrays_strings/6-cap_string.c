@@ -1,23 +1,32 @@
 #include "main.h"
 
 /**
- * cap_string -  capitalizes all words of a string
- * @str: string
+ * cap_string - capitalize all words in a string.
+ * @s: string
  *
- * Return: char
+ * Return: pointer to string.
  */
-
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-        int index = 0;
-        char prev;
+	int index = 0, isLowerCase, isSpecialChar;
+	char prev;
 
-        while (*(str + index) != '\0')
-        {
-                prev = index - 1;
-                if(*(str + index) >= 97 && *(str + index) <= 122 && (*(str + prev) == ' ' || *(str + prev) == '.' || *(str + prev) == '\n' || *(str + prev) == '\t' || *(str + prev) == ',' || *(str + prev) == ';' || *(str + prev) == '.' ||  *(str + prev) == '!' ||  *(str + prev) == '?' ||  *(str + prev) == '"' ||  *(str + prev) == '(' ||  *(str + prev) == ')' ||  *(str + prev) == '{' || *(str + prev) == '}'))
-                        *(str + index) = str[index] - 32;
-                index++;
-        }
-        return (str);
+	while (*(s + index))
+	{
+		isLower = *(s + index) >= 97 && *(s + index) <= 122;
+		prev = index > 0 ? *(s + (index - 1)) : '\0';
+		isSpecialChar = prev == ' ' || prev == '.' || prev == '\n'
+			|| prev == '\t' || prev == ',' || prev == ';'
+			|| prev == '!' || prev == '?' || prev == '"'
+			|| prev == '(' || prev == ')' || prev == '{'
+			|| prev == '}';
+		if (index == 0 && isLower)
+			*(s + index) = *(s + index) - 32;
+		else
+			if (isSpecialChar && isLowerCase)
+				*(s + index) = *(s + index) - 32;
+		index++;
+	}
+
+	return (s);
 }
