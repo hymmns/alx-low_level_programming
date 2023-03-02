@@ -2,9 +2,9 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: destination
- * @src: source
- * Return: char
+ * @dest: destination string
+ * @src: source string
+ * Return: char pointer
  */
 
 char *_strcat(char *dest, char *src)
@@ -13,7 +13,6 @@ char *_strcat(char *dest, char *src)
 
         while (dest[destIndex])
                 destIndex++;
-
         while (src[srcIndex] >= 0)
         {
                 dest[destIndex] = src[srcIndex];
@@ -22,6 +21,5 @@ char *_strcat(char *dest, char *src)
                 destIndex++;
                 srcIndex++;
         }
-
         return (dest);
 }
