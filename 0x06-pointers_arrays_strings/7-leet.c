@@ -1,29 +1,29 @@
 #include "main.h"
 /**
  * leet - encodes a string.
- * @s: pointer string.
+ * @s: pointer to string.
  *
  * Return: char pointer to s.
  */
 char *leet(char *s)
 {
-	int sIndex, len;
+	int ind, len;
 	char digits[] = "4433007711";
-  	char letters[] = "aAeEoOtTlL";
-
-	sIndex = 0;
-	while (s[sIndex] != '\0')
+	char letters[] = "aAeEoOtTlL";
+	
+	ind = 0;
+	while (s[ind] != '\0')
 	{
 		len = 0;
 		while (len < 10)
 		{
-			if (letters[len] == s[sIndex])
+			if (letters[len] == s[ind])
 			{
-				s[sIndex] = digits[len];
+				s[ind] = digits[len];
 			}
 			len++;
 		}
-		sIndex++;
+		ind++;
 	}
 	return (s);
 }
