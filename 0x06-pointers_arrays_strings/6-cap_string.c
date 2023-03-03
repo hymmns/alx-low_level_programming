@@ -8,26 +8,25 @@
  */
 char *cap_string(char *s)
 {
-	int index = 0, isLowerCase, isSpecialChar;
+	int ind = 0, isLower, isSpec;
 	char prev;
 
-	while (*(s + i))
+	while (*(s + ind))
 	{
-		isLowerCase = *(s + index) >= 97 && *(s + index) <= 122;
-		prev = index > 0 ? *(s + (index - 1)) : '\0';
-		isSpecialChar = prev == ' ' || prev == '\t' || prev == '\n'
+		isLower = *(s + ind) >= 97 && *(s + ind) <= 122;
+		prev = ind > 0 ? *(s + (ind - 1)) : '\0';
+		isSpec = prev == ' ' || prev == '\t' || prev == '\n'
 			|| prev == ',' || prev == ';' || prev == '.'
 			|| prev == '!' || prev == '?' || prev == '"'
 			|| prev == '(' || prev == ')' || prev == '{'
 			|| prev == '}';
-		if (index == 0 && isLowerCase)
-			*(s + index) = *(s + index) - 32;
+		if (ind == 0 && isLower)
+			*(s + ind) = *(s + ind) - 32;
 		else
-			if (isSpecialChar && isLowerCase)
-				*(s + index) = *(s + index) - 32;
-		index++;
+			if (isSpec && isLower)
+				*(s + ind) = *(s + ind) - 32;
+		ind++;
 	}
 
 	return (s);
 }
-
