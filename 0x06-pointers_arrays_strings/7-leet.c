@@ -3,27 +3,27 @@
  * leet - encodes a string.
  * @s: pointer to string.
  *
- * Return: char pointer to s.
+ * Return: char pointer.
  */
 char *leet(char *s)
 {
-	int ind, len;
+	int c1, c2;
 	char letters[] = "aAeEoOtTlL";
-	char digits[] = "4433007711";
-	
-	ind = 0;
-	while (s[ind] != '\0')
+	char nums[] = "4433007711";
+
+	s_count = 0;
+	while (s[c1] != '\0')
 	{
-		len = 0;
-		while (len < 10)
+		c2 = 0;
+		while (c2 < 10)
 		{
-			if (letters[len] == s[ind])
+			if (letters[c2] == s[c1])
 			{
-				s[ind] = digits[len];
+				s[c1] = nums[c2];
 			}
-			len++;
+			c2++;
 		}
-		ind++;
+		c1++;
 	}
 	return (s);
 }
