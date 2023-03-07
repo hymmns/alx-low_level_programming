@@ -5,7 +5,7 @@
  * @s: char pointer string.
  * @c: char character to locate.
  *
- * Return: char pointer first occurence
+ * Return: char pointer first occurence.
 */
 char *_strchr(char *s, char c)
 {
@@ -20,5 +20,5 @@ char *_strchr(char *s, char c)
         if (s[ind] == c)
                 return (s + ind);
                 
-        return ('\0');
+                return ('\0');
 }
