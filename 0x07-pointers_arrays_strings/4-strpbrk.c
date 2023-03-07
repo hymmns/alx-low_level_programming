@@ -1,25 +1,23 @@
 #include "main.h"
 /**
- * _strpbrk - searches a string
- * for any of a set of bytes.
- * @s: char pointer.
- * @accept: char pointer.
+ * _strpbrk - searches a string for any of a set of bytes.
+ * @s: char pointer to string.
+ * @accept: chat pointer.
  *
- * Return: char pointer to the bytes
- * or NULL if not found.
-*/
+ * Return: pointer to the byte in s that matches
+ * one of the bytes in accept, or NULL if no such byte is found.
+ */
 char *_strpbrk(char *s, char *accept)
 {
-        int sIndex = 0, aIndex;
-        
-        while (s[sIndex] != '\0')
-        {
-                for (aIndex = 0; accept[aIndex] != '\0'; aIndex++)
-                {
-                        if (s[sIndex] == accept[aIndex])
-                                return (s + sIndex);
-                }
-                sIndex++;
-        }
-        return ('\0');
+	int i, j;
+
+	for (i = 0; *(s + i) != '\0'; i++)
+	{
+		for (j = 0; *(accept + j) != '\0'; j++)
+		{
+			if (*(s + i) == *(accept + j))
+				return (s + i);
+		}
+	}
+	return ('\0');
 }
