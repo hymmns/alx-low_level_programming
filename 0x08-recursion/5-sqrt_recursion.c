@@ -17,7 +17,7 @@ int helper(int n, int start, int end)
 		return (-1);
 	if (start * start == n)
 		return (start);
-	helper(n, ++start, end);
+	return (helper(n, ++start, end));
 }
 /**
  * helper - helper function
