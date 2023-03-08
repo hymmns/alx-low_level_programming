@@ -20,8 +20,7 @@ int helper(int n, int start, int end)
 	return (helper(n, ++start, end));
 }
 /**
- * helper - helper function
- * returns the natural square root of a number
+ * _sqrt_recursion - returns the natural square root of a number
  * returns -1 if the number is not natural square root.
  * @n: int number
  *
