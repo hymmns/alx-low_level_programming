@@ -8,6 +8,6 @@
  */
 void _puts(char *s)
 {
-	char c = *s;
+	*s = *s;
 
 }
