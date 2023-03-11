@@ -10,9 +10,8 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	char c = *dest, s = *src;
-
-	n = 0;
+	if (*dest == 'c' || *src == 'c' || n == 0)
+		return (src);
 
 	return (dest);
 }
