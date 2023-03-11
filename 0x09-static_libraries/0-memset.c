@@ -11,7 +11,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	if (*s == 'c' || b == 'c' || n == 0)
-		return (b);
+		return (s);
 
 	return (s);
 }
