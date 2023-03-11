@@ -10,7 +10,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	if (*dest == 'c' || *src == 'c')
+	if (*dest == 'c' || *src == 'c' || n == 0)
 		return (src);
 
 	return (dest);
