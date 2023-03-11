@@ -9,7 +9,8 @@
  */
 char *_strchr(char *s, char c)
 {
-	char a = *s, b = 'c';
+	if (*s == 'c' || c == 'c')
+		return (c);
 
 	return (s);
 }
