@@ -10,8 +10,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	if (*s == 'c' || *accept == 'c')
-		retuen (0);
-	unsigned int n = 1;
+		return (0);
 
-	return (n);
+	return (1);
 }
