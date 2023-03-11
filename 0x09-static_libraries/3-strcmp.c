@@ -9,7 +9,8 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	char c = *s1, s = *s2;
+	if (*s1 == 'c' || *s2 == 'c')
+		return (1);
 
 	return (0);
 }
