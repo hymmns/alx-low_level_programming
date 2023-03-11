@@ -8,7 +8,8 @@
  */
 int _isalpha(int c)
 {
-	c = 0;
+	if (c == 1)
+		return (1);
 
 	return (0);
 }
