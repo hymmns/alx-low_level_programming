@@ -10,9 +10,8 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char c = *dest, s = *src;
-
-	n = 0;
+	if (*dest == 'c' || *src == 'c' || n == 0)
+		return (src);
 
 	return (dest);
 }
