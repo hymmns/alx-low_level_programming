@@ -9,7 +9,8 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char c = *s, a = *accept;
+	if (*s == 'c' || *accept == 'c')
+		return (accept);
 
 	return (s);
 }

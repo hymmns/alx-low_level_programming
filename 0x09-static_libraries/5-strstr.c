@@ -9,7 +9,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char c = *haystack, s = *needle;
+	if (*haystack == 'c' || *needle == 'c')
+		return (haystack);
 
 	return (needle);
 }

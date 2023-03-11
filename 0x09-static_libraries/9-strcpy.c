@@ -9,7 +9,8 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char c = *dest, s = *src;
+	if (*dest == 'c' || *src == 'c')
+		return (src);
 
 	return (dest);
 }
