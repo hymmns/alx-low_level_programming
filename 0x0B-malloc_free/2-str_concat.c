@@ -43,6 +43,7 @@ char *str_concat(char *s1, char *s2)
 			s2Len++;
 			s1Len++;
 		}
+	*(strConcat + s1Len) = '\0';
 
 	return (strConcat);
 }
