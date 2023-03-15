@@ -11,10 +11,18 @@
  */
 char *_strdup(char *str)
 {
-	char *strDup = (char *) malloc(sizeof(char));
-	int index = 0;
+	int index = 0, len = 0;
+	char *strDup;
 
-	if (str == NULL || strDup == NULL)
+	if (str == NULL)
+		return (NULL);
+
+	while (*(str + len) != '\0')
+		len++;
+
+	strDup = (char *) malloc(sizeof(char) * (len + 1));
+
+	if (strDup == NULL)
 		return (NULL);
 
 	while (*(str + index) != '\0')
