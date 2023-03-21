@@ -12,9 +12,7 @@ void print_dog(struct dog *d)
 	if (d == NULL)
 		return;
 
-	char *formatN = d->name == NULL ? "(nil)" : d->name;
-	float formatA = !d->age ? 0.0 : d->age;
-	char *formatO = d->owner == NULL ? "(nil)" : d->owner;
-
-	printf("Name: %s\nAge: %f\nOwner: %s\n", formatN, formatA, formatO);
+	printf("Name: %s\n", d->name == NULL ? "(nil)" : d->name);
+	printf("Age: %f\n", !d->age ? 0.0 : d->age);
+	printf("Owner: %s\n", d->owner == NULL ? "(nil)" : d->owner);
 }
