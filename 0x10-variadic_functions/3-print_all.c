@@ -26,7 +26,7 @@ void print_all(const char *const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == f_types[j].specifier)
+			if (format[i] == f_types[j].delimiter)
 			{
 				f_types[j].callback(delimiter, ap);
 				delimiter = sep;
