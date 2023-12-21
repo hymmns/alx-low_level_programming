@@ -3,9 +3,10 @@
 /***/
 void times_table()
 {
-	for (int row = 0; row < 10; row++)
+	int row, col;
+	for (row = 0; row < 10; row++)
 	{
-		for (int col = 0; col < 10; col++)
+		for (col = 0; col < 10; col++)
 		{
 			int first_digit = ((row * col) / 10);
 			int sec_digit = ((row * col) % 10);
