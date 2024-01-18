@@ -2,8 +2,10 @@
 
 /**
  * add - adds two integers and returns the result.
- * 
- * Return: Integer 
+ * @a: Int multiplicand.
+ * @b: Int multiplier.
+ *
+ * Return: Integer
  */
 int add(int a, int b)
 {
