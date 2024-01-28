@@ -1,10 +1,8 @@
-#include <stddef.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
  * free_dlistint - frees a dlistint_t list.
- * @head: pinter
+ * @head: pointer
  *
  * Return: void
  */
