@@ -16,7 +16,7 @@ int main(void)
 			putchar((digit_two / 10) + '0');
 			putchar((digit_two % 10) + '0');
 
-			if (digit_one < 99 || digit_two < 100)
+			if (digit_one < 98 && digit_two < 100)
 			{
 				putchar(',');
 				putchar(' ');
