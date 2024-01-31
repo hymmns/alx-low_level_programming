@@ -18,10 +18,11 @@ int main(void)
 				putchar(digit_two + '0');
 				putchar(digit_three + '0');
 
-				if (digit_one < 7 || digit_two < 8 || digit_three < 9)
+				if (digit_one < 7 && (digit_two < 9 || digit_three < 10))
+				{
 					putchar(',');
-
-				putchar(' ');
+					putchar(' ');
+				}
 			}
 		}
 	}
