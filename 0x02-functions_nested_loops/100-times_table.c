@@ -28,13 +28,13 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (result < 99)
+				else if (result < 100)
 				{
 					_putchar(' ');
 					_putchar(result / 10 + '0');
 					_putchar(result % 10 + '0');
 				}
-				else if (result < 999)
+				else if (result < 1000)
 				{
 					_putchar(result / 100 + '0');
 					_putchar((result % 100) / 10 + '0');
