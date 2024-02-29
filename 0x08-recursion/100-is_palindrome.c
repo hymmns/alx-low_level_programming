@@ -35,6 +35,20 @@ int helper(char *s, int len, int start, int end)
 }
 
 /**
+ * _strlen_recur - prints a string, followed by a new line.
+ * @s: char pointer
+ *
+ * Return: int
+ */
+int _strlen_recur(char *s)
+{
+	if (*s == '\0')
+		return (0);
+
+	return (1 + _strlen_recur(s + 1));
+}
+
+/**
  * is_palindrome - 1 if a string is a palindrome and 0 if not.
  * @s: char pointer
  *
@@ -42,7 +56,7 @@ int helper(char *s, int len, int start, int end)
  */
 int is_palindrome(char *s)
 {
-	int len = _strlen_recursion(s);
+	int len = _strlen_recur(s);
 
 	if (len == 0 || len == 1)
 		return (1);
