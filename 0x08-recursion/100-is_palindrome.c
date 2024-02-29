@@ -32,7 +32,7 @@ int helper(char *s, int len, int start, int end)
 	if (end - start == 2 && !is_even(len))
 		return (1);
 
-	helper(s, len, start + 1, end - 1);
+	return (helper(s, len, start + 1, end - 1));
 }
 
 /**
