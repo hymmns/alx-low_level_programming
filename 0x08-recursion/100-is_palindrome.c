@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * is_even - checks if a given number is even
